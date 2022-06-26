@@ -4,7 +4,7 @@
 
     <RouterPath />
 
-    <main class="max-w-[1680px] px-8">
+    <main class="max-w-[1680px] px-4 lg:px-8 mx-auto">
       <router-view/>
     </main>
 

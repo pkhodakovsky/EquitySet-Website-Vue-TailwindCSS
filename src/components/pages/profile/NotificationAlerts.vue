@@ -1,39 +1,44 @@
 <template>
   <div class="max-w-[840px]">
-    <h3 class="text-footer-nav text-2xl font-bold mb-1">{{ heading }}</h3>
-    <p class="text-sm text-secondary-text mb-6">{{ description }}</p>
+    <h3 class="text-footer-nav text-2xl font-bold mb-1 leading-7 tracking-[-0.0045em]">{{ heading }}</h3>
+    <p class="text-sm leading-4 text-secondary-text mb-6">{{ description }}</p>
 
     <SettingsCard :options="{ title: 'Email' }">
-      <div class="flex items-center">
+      <div class="flex flex-col lg:flex-row lg:items-center">
         <DisabledInputWrapper>{{ email.data }}</DisabledInputWrapper>
 
-        <p class="font-semibold text-sm">{{ email.info }}</p>
+        <p
+          style="font-family: 'Open Sans', sans-serif;"
+          class="font-semibold leading-4 text-sm mt-2 lg:mt-0"
+        >
+          {{ email.info }}
+        </p>
       </div>
     </SettingsCard>
 
     <SettingsCard :options="{ title: 'Mobile Number' }">
       <div>
-        <div class="flex items-center justify-between">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
           <DisabledInputWrapper>
             <img
               :src="require('@/assets/img/pages/profile/info-icon.svg')"
               alt="Info icon"
               class="mr-2.5"
             />
-            <p>{{ mobile.data }}</p>
+            <p class="text-secondary-text">{{ mobile.data }}</p>
           </DisabledInputWrapper>
 
-          <p class="font-medium text-sm text-primary cursor-pointer">
-            + <span class="border-b border-solid border-primary">{{ mobile.addBtn }}</span>
+          <p class="font-medium text-sm text-primary cursor-pointer mt-2 lg:mt-0">
+            + <span class="border-b border-solid border-primary leading-4">{{ mobile.addBtn }}</span>
           </p>
         </div>
 
-        <div class="mt-6 mb-11 flex items-center text-sm text-footer-nav">
-          <p class="mr-8">{{ mobile.notDeliver.description }}</p>
-          <TimeSelect /><p class="mx-3">Until</p><TimeSelect />
+        <div class="mt-6 mb-11 flex flex-col lg:flex-row items-center text-sm text-footer-nav leading-4">
+          <p class="mr-8 mb-2 lg:mb-0">{{ mobile.notDeliver.description }}</p>
+          <TimeSelect /><p class="mx-3 my-3 lg:my-0">Until</p><TimeSelect />
         </div>
 
-        <div class="border-t border-solid border-border text-xs text-secondary-text">
+        <div class="border-t border-solid border-border text-xs font-medium text-secondary-text">
           <p class="p-1 max-w-[640px]">{{ mobile.description }}</p>
         </div>
       </div>

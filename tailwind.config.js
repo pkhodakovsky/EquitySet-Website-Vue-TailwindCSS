@@ -28,6 +28,7 @@ module.exports = {
       'disabled-input-text': '#849DAB',
       'card-text-light': '#6B7280',
       'accordion-when': '#505D68',
+      'notification-other-title': '#111827'
     },
     extend: {},
   },

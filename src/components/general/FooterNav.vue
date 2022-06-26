@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col lg:flex-row">
-    <div v-for="item in items" :key="item.id" class="w-[217px] mr-8 mb-8 lg:mb-0">
-      <h3 class="font-bold text-sm">{{ item.title }}</h3>
+  <div class="flex flex-wrap flex-row">
+    <div v-for="item in items" :key="item.id" class="w-[50%] lg:w-[217px] lg:mr-8 mb-8 lg:mb-0">
+      <h3 class="font-bold text-sm text-footer-nav">{{ item.title }}</h3>
 
       <ul class="flex flex-col">
         <li v-for="link in item.links" :key="link.id" class="mt-2 text-xs text-footer-nav">

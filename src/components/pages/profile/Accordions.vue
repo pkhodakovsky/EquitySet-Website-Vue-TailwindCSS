@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 class="font-medium pl-3 text-xl text-footer-nav mb-2">
+    <h3 class="font-medium leading-none pl-3 text-xl text-footer-nav mb-2">
       {{ options.heading }} ({{ options.items.length }})
     </h3>
 

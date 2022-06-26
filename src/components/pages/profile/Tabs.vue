@@ -1,9 +1,9 @@
 <template>
-  <div class="flex items-center border-b border-solid border-border">
+  <div class="flex flex-row items-center border-b border-solid border-border overflow-auto">
     <div
       v-for="item in items"
       :key="item.id"
-      class="pt-6 pb-5 px-1 mx-5 font-medium cursor-pointer"
+      class="pt-6 pb-5 px-1 mx-5 font-medium cursor-pointer whitespace-nowrap text-sm leading-4"
       :class="{
         'text-tabs': !item.active,
         'text-primary border-b border-solid border-primary': item.active

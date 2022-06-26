@@ -1,5 +1,5 @@
 <template>
-  <footer class="max-w-[1680px] px-8 pt-14 pb-10">
+  <footer class="max-w-[1680px] px-8 lg:mx-auto pt-14 pb-10">
     <div class="border-t border-solid border-border pt-6">
       <div class="py-2">
         <router-link to="/">
@@ -7,16 +7,14 @@
         </router-link>
       </div>
 
-      <div class="pt-5 pb-14 flex items-end justify-between">
-        <div>
-          <FooterNav />
-        </div>
+      <div class="pt-5 pb-14 flex flex-col lg:flex-row items-end justify-between">
+        <FooterNav />
 
         <AppMarkets />
       </div>
 
-      <div class="py-1 flex items-center justify-between">
-        <div class="flex items-center text-sm text-footer-nav">
+      <div class="py-1 flex flex-col lg:flex-row items-center justify-between">
+        <div class="flex flex-col lg:flex-row lg:items-center text-sm text-footer-nav">
           <div>
             {{ copyrightText }}
           </div>
@@ -25,13 +23,13 @@
             v-for="item in copyrightLinks"
             :key="item.id"
             :to="item.url"
-            class="ml-4"
+            class="lg:ml-4 mt-1 lg:mt-0"
           >
             {{ item.title }}
           </router-link>
         </div>
 
-        <SocialLinks />
+        <SocialLinks class="mt-8 lg:mt-0" />
       </div>
 
       <div class="mt-10 border-t border-solid border-border">

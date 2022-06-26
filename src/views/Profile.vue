@@ -1,9 +1,9 @@
 <template>
-  <div class="max-w-[1492px] mx-auto pt-[100px] pb-[240px]">
+  <div class="max-w-[1492px] mx-auto pt-5 lg:pt-[104px] pb-5 lg:pb-[180px]">
     <Main />
     <Tabs class="mt-[70px] mb-10" @changeTab="changeTab" />
 
-    <div class="px-10 pt-4 pb-10 rounded-[12px] bg-icon-bg">
+    <div class="px-2 lg:px-10 pt-4 pb-10 rounded-[12px] bg-icon-bg">
       <components :is="activeTab" />
     </div>
   </div>

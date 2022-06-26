@@ -1,13 +1,15 @@
 <template>
-  <div class="max-w-[1680px] px-8 py-3 text-profile-icon flex">
+  <div class="max-w-[1680px] mx-auto px-4 lg:px-8 py-1.5 text-profile-icon flex">
     <div
       v-for="(item, i) in path"
       :key="item.id"
-      class="mr-2"
+      class="mr-2 flex items-center"
     >
-      <router-link :to="item.link">{{ item.title }}</router-link>
+      <router-link class="text-xs" :to="item.link">{{ item.title }}</router-link>
 
-      <span v-if="i !== path.length - 1" class="ml-2">{{ '>' }}</span>
+      <span v-if="i !== path.length - 1" class="ml-2">
+        <img :src="require('@/assets/img/components/router-path/arrow-right.svg')" alt="right arrow" />
+      </span>
     </div>
   </div>
 </template>

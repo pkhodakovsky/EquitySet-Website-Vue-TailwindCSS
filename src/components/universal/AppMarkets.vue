@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col">
+  <div class="flex lg:flex-col justify-between w-full lg:w-fit">
     <a
       v-for="item in appMarkets"
       :key="item.id"

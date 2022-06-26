@@ -2,7 +2,7 @@
   <div class="mb-10">
     <h4
       v-if="options && options.heading"
-      class="font-medium pl-3 text-xl text-footer-nav mb-2"
+      class="font-medium leading-none pl-3 text-xl text-footer-nav mb-2"
     >
       {{ options.heading }}
     </h4>

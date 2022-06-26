@@ -1,6 +1,10 @@
 <template>
-  <div class="flex items-center p-1.5 rounded-[12px] bg-search-bg w-[320px] max-w-[90vw]">
-    <input type="text" placeholder="Type “/” to focus " class="mr-2 w-full bg-transparent text-nav-grey px-2 py-1">
+  <div class="flex items-center p-1.5 rounded-[12px] bg-search-bg w-[325px] max-w-[90vw]">
+    <input
+      type="text"
+      placeholder="Type “/” to focus"
+      class="mr-2 w-full bg-transparent text-nav-grey px-2 py-1 text-sm"
+    >
 
     <div class="h-[32px] w-[32px] rounded-[12px] bg-primary shrink-0 flex items-center justify-center">
       <img

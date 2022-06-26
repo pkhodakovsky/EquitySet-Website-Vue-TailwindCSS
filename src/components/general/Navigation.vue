@@ -1,10 +1,10 @@
 <template>
   <nav>
     <ul class="flex flex-col lg:flex-row items-center">
-      <li v-for="item in items" :key="item.id" class="mx-2.5 relative flex items-center">
+      <li v-for="item in items" :key="item.id" class="mx-[6px] relative flex items-center">
         <router-link
           :to="item.url"
-          class="p-2 text-base font-medium"
+          class="p-2 text-xs font-medium"
           :class="{
             'text-nav-grey': $route.path !== item.url,
             'text-primary': $route.path === item.url

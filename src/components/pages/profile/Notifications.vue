@@ -9,18 +9,29 @@
         <FormCheckbox
           :active="item.active"
           @changeCheck="item.active = !item.active"
-          class="mt-1.5"
+          class="mt-1.5 shrink-0"
         />
 
         <div class="ml-5">
-          <div class="flex items-center">
-            <h5 class="font-bold text-footer-nav">{{ item.title }}</h5>
-            <p v-if="item.other" class="ml-2.5 px-2 py-0.5 bg-primary text-white text-xs rounded-[4px]">
+          <div class="flex flex-col lg:flex-row lg:items-center">
+            <h5
+              class="font-bold mb-1 lg:mb-0"
+              :class="{
+                'text-notification-other-title': item.other,
+                'text-grey': !item.other,
+              }"
+            >
+              {{ item.title }}
+            </h5>
+            <p
+              v-if="item.other"
+              class="lg:ml-2.5 px-2 py-0.5 bg-primary font-medium text-white text-xs rounded-[4px] w-fit"
+            >
               {{ item.other }}
             </p>
           </div>
 
-          <p class="text-sm text-card-text-light">{{ item.description }}</p>
+          <p class="text-sm text-card-text-light mt-2 lg:mt-0">{{ item.description }}</p>
         </div>
       </div>
     </div>
