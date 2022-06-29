@@ -1,5 +1,10 @@
 <template>
   <footer class="max-w-[1680px] px-8 lg:mx-auto pt-14 pb-10">
+    <div class="flex justify-end mr-3 lg:mr-28 mb-3">
+      <button @click="scrollToTop">
+        <img :src="require('@/assets/img/icons/button-up.svg')" alt="profile icon" />
+      </button>
+    </div>
     <div class="border-t border-solid border-border pt-6">
       <div class="py-2">
         <router-link to="/">
@@ -65,6 +70,11 @@
       ],
       description: 'Disclaimers: EquitySet LLC is not operated by a broker, a dealer, or a registered investment adviser. Under no circumstances does any information posted on EquitySet LLC represent an individualized recommendation to buy or sell a security. The information on this site, and in its related emails and newsletters, is not intended to be, nor does it constitute individual investment advice or recommendations. The users may buy and sell securities before and after any particular article and report and information herein is published, with respect to the securities discussed in any article and report posted herein. In no event shall EquitySet LLC be liable to any member, guest or third party for any damages of any kind arising out of the use of any content or other material published or available on EquitySet LLC, or relating to the use of, or inability to use, equitysetdata.com or any content, including, without limitation, any investment losses, lost profits, lost opportunity, special, incidental, indirect, consequential or punitive damages. Past performance is a poor indicator of future performance. The information on this site is in no way guaranteed for completeness, accuracy or in any other way. The companies listed on this website are not affiliated with EquitySet LLC .',
       shortInfo: 'Equityset does not provide individualized investment advice or recommendations for individual portfolios.'
-    })
+    }),
+    methods: {
+      scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+    }
   }
 </script>

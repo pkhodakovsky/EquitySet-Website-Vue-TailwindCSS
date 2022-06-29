@@ -6,7 +6,7 @@
       'h-[331px]': !close
     }"
   >
-    <div class="flex flex-col lg:flex-row lg:items-center justify-between max-w-[1680px] px-4 lg:px-8 mx-auto relative">
+    <div class="flex flex-col lg:flex-row items-center justify-between max-w-[1680px] px-4 lg:px-8 mx-auto relative">
       <div
         class="h-4 w-5 flex flex-col justify-between items-center absolute right-4 top-0 lg:hidden"
         @click="close = !close"

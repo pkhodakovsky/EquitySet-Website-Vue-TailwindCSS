@@ -10,6 +10,11 @@ const routes = [
     name: 'home',
     component: Profile
   },
+  {
+    path: '/company',
+    name: 'company',
+    component: () => import('@/views/Company.vue')
+  }
 ]
 
 const router = new VueRouter({

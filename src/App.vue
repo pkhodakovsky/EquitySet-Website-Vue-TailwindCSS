@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <Custom />
+    <Default />
   </div>
 </template>
 
 <script>
-  import Custom from "@/layouts/Custom";
+  import Default from "@/layouts/Default";
 
   export default {
-    components: { Custom }
+    components: { Default }
   }
 </script>
