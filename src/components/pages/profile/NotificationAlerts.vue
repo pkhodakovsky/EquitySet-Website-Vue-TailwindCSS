@@ -35,7 +35,7 @@
 
         <div class="mt-6 mb-11 flex flex-col lg:flex-row items-center text-sm text-footer-nav leading-4">
           <p class="mr-8 mb-2 lg:mb-0">{{ mobile.notDeliver.description }}</p>
-          <TimeSelect /><p class="mx-3 my-3 lg:my-0">Until</p><TimeSelect />
+          <TimeSelect :items="timeFrom" /><p class="mx-3 my-3 lg:my-0">Until</p><TimeSelect :items="timeTo" />
         </div>
 
         <div class="border-t border-solid border-border text-xs font-medium text-secondary-text">
@@ -74,6 +74,60 @@
       Accordions
     },
     data: () => ({
+      timeFrom: [
+        '00:00',
+        '01:00',
+        '02:00',
+        '03:00',
+        '04:00',
+        '05:00',
+        '06:00',
+        '07:00',
+        '08:00',
+        '09:00',
+        '10:00',
+        '11:00',
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+        '18:00',
+        '19:00',
+        '20:00',
+        '21:00',
+        '22:00',
+        '23:00',
+        '24:00',
+      ],
+      timeTo: [
+        '00:00',
+        '01:00',
+        '02:00',
+        '03:00',
+        '04:00',
+        '05:00',
+        '06:00',
+        '07:00',
+        '08:00',
+        '09:00',
+        '10:00',
+        '11:00',
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+        '18:00',
+        '19:00',
+        '20:00',
+        '21:00',
+        '22:00',
+        '23:00',
+        '24:00',
+      ],
       heading: 'Notification & Alerts',
       description: 'Customize the notification and alerts experience',
       email: {

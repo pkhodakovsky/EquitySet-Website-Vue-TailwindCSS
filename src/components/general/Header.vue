@@ -1,9 +1,11 @@
 <template>
   <header
-    class="py-3 border-b border-solid border-border lg:h-fit transition-all duration-500 overflow-hidden"
+    class="py-3 lg:h-fit transition-all duration-500 overflow-hidden"
     :class="{
       'h-[48px]': close,
-      'h-[331px]': !close
+      'h-[331px]': !close,
+      'bg-alabaster': premium,
+      'border-b border-border': !premium
     }"
   >
     <div class="flex flex-col lg:flex-row lg:items-center justify-between max-w-[1680px] px-4 lg:px-8 mx-auto relative">
@@ -24,18 +26,24 @@
         </router-link>
       </div>
 
-      <div class="flex flex-col lg:flex-row items-center my-4 lg:my-0">
-        <div class="lg:mr-8"><Search /></div>
+      <div
+        class="flex flex-col lg:flex-row items-center my-4 lg:my-0"
+        :class="{
+          'lg:w-full lg:pl-[134px]': premium,
+        }"
+      >
+        <div class="lg:mr-8"><Search :premium="premium" /></div>
 
-        <Navigation />
+        <Navigation :premium="premium" />
       </div>
 
-      <ProfileBtn />
+      <ProfileBtn :premium="premium" />
     </div>
   </header>
 </template>
 
 <script>
+  import { LAYOUTS } from "@/constants/constants";
   import Navigation from "@/components/general/Navigation";
   import Search from "@/components/universal/Search";
   import ProfileBtn from "@/components/general/ProfileBtn";
@@ -46,9 +54,17 @@
       Search,
       Navigation
     },
+    props: {
+      premium: { type: Boolean, default: false },
+    },
     data: () => ({
-      logo: require('@/assets/img/logos/logo.svg'),
       close: true,
-    })
+      layouts: LAYOUTS
+    }),
+    computed: {
+      logo() {
+        return this.premium ? require('@/assets/img/logos/logo-premium.svg') : require('@/assets/img/logos/logo.svg')
+      }
+    }
   }
 </script>

@@ -1,19 +1,26 @@
 <template>
   <div class="flex items-center">
     <a
-      v-for="item in links"
+      v-for="(item, i) in links"
       :key="item.id"
       :href="item.url"
       target="_blank"
-      class="ml-7"
+      :class="{
+        'ml-7': i,
+        'h-5 w-5': !premium,
+        'h-6 w-6 opacity-70': premium
+      }"
     >
-      <img :src="item.icon" :alt="item.title" />
+      <img class="h-full w-full object-contain" :src="item.icon" :alt="item.title" />
     </a>
   </div>
 </template>
 
 <script>
   export default {
+    props: {
+      premium: { type: Boolean, default: false }
+    },
     data: () => ({
       links: [
         { icon: require('@/assets/img/social-links/facebook.svg'), title: 'Facebook', url: '#', id: '1' },

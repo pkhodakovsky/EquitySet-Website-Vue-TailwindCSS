@@ -9,7 +9,7 @@
     </div>
 
     <div
-      v-if="data.items.length"
+      v-if="data.items && data.items.length"
       class="max-h-0 overflow-hidden transition-all duration-500"
       :class="{ 'pt-8': open }"
       ref="accordion"
