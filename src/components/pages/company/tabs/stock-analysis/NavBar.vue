@@ -1,6 +1,6 @@
 <template>
   <div class="pt-[9px] pb-3 px-2 lg:px-5 flex flex-col lg:flex-row lg:items-center justify-between bg-icon-bg">
-    <NavBarItems @changeNavBarItem="changeNavBarItem" />
+    <NavBarItems @changeNavBarItem="changeNavBarItem" :nav-items="navItems" />
 
     <div class="flex items-center">
       <TimeSelect class="mr-6" :items="period" :selected="'Last 5 Years'" />
@@ -20,6 +20,12 @@
       ThreeCircleDropBtn,
       TimeSelect,
       NavBarItems
+    },
+    props: {
+      navItems: {
+        type: Object,
+        default: () => {}
+      }
     },
     data: () => ({
       period: [

@@ -40,8 +40,10 @@ export default {
   },
   methods: {
     changeTab(id) {
-      this.options.items = this.options.items.map(item => id === item.id ? { ...item, active: true } : { ...item, active: false })
-      this.options.active = id
+      if(this.options.active === id) return
+      this.$router.push({ path: '/company', query: { tag: id  } })
+      this.$emit('change-tab', id)
+
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <OperationsSection :options="sectionOptions" :premiumAnalysis="premiumAnalysis">
-    <div class="flex items-start justify-between">
+    <div class="flex flex-col lg:flex-row items-start justify-between">
       <Card class="lg:min-w-[840px]" :options="cardOptions">
         <div class="pl-2">
           <div class="pt-6 pb-[23px]">
@@ -13,7 +13,7 @@
         </div>
       </Card>
 
-      <Accordion class="px-3 lg:w-[332px]" :items="accordionItems" />
+      <Accordion class="mt-5 lg:mt-0 lg:px-3 lg:w-[332px]" :items="accordionItems" />
     </div>
   </OperationsSection>
 </template>
@@ -43,7 +43,10 @@ export default {
       description: 'Cost of Debt Growth and % of Net Income',
       line: true,
       listCheck: true,
-      learnMoreLink: '/'
+      gridBtn: true,
+      bottomLinks: [
+        { id: 1, title: 'Learn more', link: '/' },
+      ],
     },
     accordionItems: [
       {

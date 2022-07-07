@@ -7,7 +7,7 @@
     <BarSimpleChart
       class="h-[209px]"
       right-margin="40%"
-      :chart-data="[120, 400, 150, 80, 70, 110, 130]"
+      :bar-data="[120, 400, 150, 80, 70, 110, 130]"
       max-yaxis="800"
       :border-radius="[5, 5, 0, 0]"
     />

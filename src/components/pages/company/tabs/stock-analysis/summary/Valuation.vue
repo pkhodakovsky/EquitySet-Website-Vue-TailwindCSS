@@ -45,8 +45,8 @@
                 </div>
               </div>
               <LineChart
-                :line-color="'#6A38EB'"
-                :line-data="[100, 200, 50, 600, 400, 300, 500, 450, 500, 700, 750, 600, 800]"
+                bottom="0%"
+                :line-data="item.lineChartData"
                 :show-y-axis="false"
                 class="h-[53px]"
               />
@@ -139,6 +139,12 @@
                 }
               ]
             }
+          ],
+          lineChartData: [
+            {
+              data: [100, 200, 50, 600, 400, 300, 500, 450, 500, 700, 750, 600, 810],
+              lineColor: '#6A38EB'
+            }
           ]
         },
         {
@@ -189,6 +195,12 @@
                   standard: true
                 }
               ]
+            }
+          ],
+          lineChartData: [
+            {
+              data: [100, 200, 50, 600, 400, 300, 500, 450, 500, 700, 750, 600, 810],
+              lineColor: '#6A38EB'
             }
           ]
         },

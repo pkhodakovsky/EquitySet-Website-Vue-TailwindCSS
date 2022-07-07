@@ -84,8 +84,10 @@
 
             <div>
               <LineChart
-                :line-color="'#3B82F6'"
-                :line-data="[100, 200, 50, 600, 400, 300, 500, 450, 500, 700, 750, 600, 800]"
+                :show-x-axis="false"
+                bottom="-10%"
+                custom-y-axis-label-formatter="{value}"
+                :line-data="lineDataChart"
                 class="mb-1.5 h-[159px] lg:h-[239px]"
               />
 
@@ -103,7 +105,7 @@
           :options="{
             title: '3.3. Headquarters',
             description: 'Market Valuations and how they have trended over time',
-            line: true,
+            line: true
           }"
           class="ml-4 w-full hidden lg:block"
         >
@@ -208,6 +210,12 @@ export default {
         title: [{ data: 'AAPL has a 25% upwards', standard: true }]
       },
     ],
+    lineDataChart: [
+      {
+        data: [100, 200, 50, 600, 400, 300, 500, 450, 500, 700, 750, 600, 820],
+        lineColor: '#3B82F6'
+      }
+    ]
   }),
   computed: {
     LMapHeight () {

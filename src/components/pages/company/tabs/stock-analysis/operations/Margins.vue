@@ -1,11 +1,12 @@
 <template>
   <OperationsSection :options="sectionOptions" :premiumAnalysis="premiumAnalysis">
-    <div class="flex flex-wrap items-start justify-between max-w-[1067px]">
-      <Card v-for="(item, i) in cards" :key="i" class="lg:min-w-[319px] mb-4 mx-auto" :options="item">
-          <GaugeTrippleChart
-            :gauge-data="{ first: 20, second: 40, third: 60 }"
-            :color-section="item.gaugeData.colorSection"
-          />
+    <div class="flex flex-col lg:flex-row items-start justify-between max-w-[1067px]">
+      <Card v-for="(item, i) in cards" :key="i" class="w-full lg:w-fit lg:min-w-[319px] mb-4" :options="item">
+        <GaugeTrippleChart
+          :gauge-data="{ first: 20, second: 40, third: 60 }"
+          :color-section="item.gaugeData.colorSection"
+        />
+
         <GaugeInfo
           v-if="item.gaugeData.gaugeSection.length"
           :gauge-section="item.gaugeData.gaugeSection"/>
@@ -55,7 +56,9 @@ export default {
         smallTitle: true,
         line: true,
         listCheck: true,
-        learnMoreLink: '/',
+        bottomLinks: [
+          { id: 1, title: 'Learn more', link: '/' },
+        ],
         gaugeData: {
           colorSection: {
             first: '#FF342A', second: '#DBDDE4', third: '#8C94AB'
@@ -129,7 +132,9 @@ export default {
         smallTitle: true,
         line: true,
         listCheck: true,
-        learnMoreLink: '/',
+        bottomLinks: [
+          { id: 1, title: 'Learn more', link: '/' },
+        ],
         gaugeData: {
           colorSection: {
             first: '#8C94AB', second: '#DBDDE4', third: '#28A946'
@@ -203,7 +208,9 @@ export default {
         smallTitle: true,
         line: true,
         listCheck: true,
-        learnMoreLink: '/',
+        bottomLinks: [
+          { id: 1, title: 'Learn more', link: '/' },
+        ],
         gaugeData: {
           colorSection: {
             first: '#8C94AB', second: '#DBDDE4', third: '#28A946'

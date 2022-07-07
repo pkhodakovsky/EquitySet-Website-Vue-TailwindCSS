@@ -1,4 +1,4 @@
-# EquitySet Website
+# assigment
 
 ## Project setup
 ```

@@ -1,14 +1,14 @@
 <template>
   <div>
-    <Head class="mb-[92px]" />
+    <Head class="mb-10 lg:mb-[92px]" />
 
     <div class="max-w-[1312px]">
       <BusinessModel />
-      <Sales class="mt-[74px]" />
-      <Costs class="mt-[66px]" />
-      <ProfitsEps class="mt-[66px]" />
-      <Margins class="mt-[89px]" />
-      <Outlook class="mt-[89px]" />
+      <Sales class="mt-10 lg:mt-[74px]" />
+      <Costs class="mt-10 lg:mt-[66px]" />
+      <ProfitsEps class="mt-10 lg:mt-[66px]" />
+      <Margins class="mt-10 lg:mt-[89px]" />
+      <Outlook class="mt-10 lg:mt-[89px]" />
     </div>
   </div>
 </template>
